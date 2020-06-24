@@ -9,7 +9,8 @@
     "splash": {
       "image": "./app/assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "resolutions": { "logkitty": "^0.7.1" }
     },
     "updates": {
       "fallbackToCacheTimeout": 0
