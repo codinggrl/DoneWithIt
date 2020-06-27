@@ -24,6 +24,7 @@ const initialMessages = [
 function MessagesScreen(props) {
   // this returns an array
   const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
 
   const handleDelete = (message) => {
     //   Delete the message from messages
@@ -50,6 +51,20 @@ function MessagesScreen(props) {
         )}
         // rendering a component
         ItemSeparatorComponent={ListItemSeparator}
+        // our variable
+        refreshing={refreshing}
+        // function for updating the list of elements(backend)
+        onRefresh={() => {
+          // new array
+          setMessages([
+            {
+              id: 2,
+              title: "T2",
+              description: "D2",
+              image: require("../assets/Ivana.jpg"),
+            },
+          ]);
+        }}
       />
     </Screen>
   );
