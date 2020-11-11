@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { View, StyleSheet, Modal, Button } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import defaultStyles from "../config/styles";
 import AppText from "./AppText";
+import Screen from "./Screen";
+import defaultStyles from "../config/styles";
 import { TouchableWithoutFeedback } from "react-native";
 
 function AppPicker({ icon, placeholder, ...otherProps }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
+    // <> is React.fragment , we use it beacuse of returning two componets from our functional component
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={styles.container}>
@@ -30,7 +32,9 @@ function AppPicker({ icon, placeholder, ...otherProps }) {
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">
-        <Button title="Close" onPress={() => setModalVisible(false)} />
+        <Screen>
+          <Button title="Close" onPress={() => setModalVisible(false)} />
+        </Screen>
       </Modal>
     </>
   );
