@@ -19,7 +19,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-swipe-list": "0.0.2",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "yup": "^0.31.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
